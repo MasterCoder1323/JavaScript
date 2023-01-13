@@ -7,7 +7,7 @@ function album(songs,photos,audioId,viewerId){
     this.audio: document.getElementById(audioId),
     this.viewer: document.getElementById(viewerId),
     this.play: function(){
-        this.audio.src = this.song;
+        this.audio.src = this.currentSong;
         this.audio.play();
     }
     this.pause: function(){
@@ -18,4 +18,15 @@ function album(songs,photos,audioId,viewerId){
         this.currentPhoto:this.photos[this.songIndex];
         this.currentSong:this.songs[this.songIndex];
     }
+    this.next: function(){
+        this.songIndex++
+        this.currentPhoto:this.photos[this.songIndex];
+        this.currentSong:this.songs[this.songIndex];
+    }
+    this.previouse: function(){
+        this.songIndex--
+        this.currentPhoto:this.photos[this.songIndex];
+        this.currentSong:this.songs[this.songIndex];
+    }
+    
 };
