@@ -1,4 +1,4 @@
-function jCanvas(id = "myCanvas", backgroundImg = "imgName"){
+export default function jCanvas(id = "myCanvas", backgroundImg = "imgName"){
     this.properties1 = document.getElementById(id);
     this.ctx = this.properties1.getContext("2d");
     //this.fabric = fabric.canvas(id);
@@ -12,7 +12,7 @@ function jCanvas(id = "myCanvas", backgroundImg = "imgName"){
     this.backgroundTag.onload = this.start();
     }
 };
-function jSprite(x = 0,y = 0,width = 100,height = 100,image = "img", location = jcanvas){
+export function jSprite(x = 0,y = 0,width = 100,height = 100,image = "img", location = jcanvas){
     this.width = width;
     this.height = height;
     this.image = image;
@@ -57,5 +57,3 @@ function jSprite(x = 0,y = 0,width = 100,height = 100,image = "img", location = 
         this.draw();
     }
 }
-export default jCanvas;
-export jSprite;
